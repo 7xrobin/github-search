@@ -1,0 +1,36 @@
+@value padding-input: 10px 35px;
+@value padding-button: 7px 15px;
+@value inner: 5px;
+@value radius: 5px;
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.icon {
+  position: absolute;
+  left: inner;
+}
+
+.input {
+  background-color: var(--blue-dark);
+  padding: padding-input;
+  min-width: 500px;
+  border: 1px solid var(--blue);
+  border-radius: radius;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.button {
+  position: absolute;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: padding-button;
+  border: none;
+  border-radius: radius;
+  right: inner;
+}
