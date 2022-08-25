@@ -1,0 +1,41 @@
+.card {
+  background-color: var(--blue-dark);
+  padding: 3%;
+  max-width: 500px;
+}
+
+.avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 20px 20px;
+}
+
+.unavailable {
+  opacity: 0.5;
+}
+
+.name {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.username {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}

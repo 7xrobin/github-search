@@ -1,3 +1,5 @@
+@value padding: 3%;
+
 .App {
   min-height: 100vh;
   padding: 3%;
@@ -5,4 +7,8 @@
   display: flex;
   flex-direction: column;
   color: var(--white);
+}
+
+.results {
+  padding-top: padding;
 }
