@@ -19,7 +19,7 @@ function User({ user }: UserProps) {
           <a href={user.html_url} className={styles.username}>
             @{user.login}
           </a>
-          <span>Email: {user.email || <NotAvailable />}</span>
+          <span>Email : {user.email || <NotAvailable />}</span>
         </div>
       </div>
 

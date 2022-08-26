@@ -1,5 +1,4 @@
-import { ChangeEvent, HTMLProps, useState } from "react";
-import { VoidExpression } from "typescript";
+import { ChangeEvent, HTMLProps } from "react";
 import { ReactComponent as SearchIcon } from "../../icons/icon-search.svg";
 import styles from "./search.module.css";
 
@@ -9,8 +8,6 @@ interface SearchProps extends HTMLProps<HTMLInputElement> {
 }
 
 function Search({ onSearch, onInputChange }: SearchProps) {
-  //   const [name, setName] = useState<string>();
-
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     onInputChange(event?.target?.value);
   };
