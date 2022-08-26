@@ -1,14 +1,14 @@
-@value padding: 3%;
-
 .App {
   min-height: 100vh;
   padding: 3%;
-  background-color: var(--black);
   display: flex;
   flex-direction: column;
+  background-color: var(--black);
   color: var(--white);
 }
 
-.results {
-  padding-top: padding;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

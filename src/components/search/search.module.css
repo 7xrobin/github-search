@@ -1,24 +1,23 @@
-@value padding-input: 10px 35px;
-@value padding-button: 7px 15px;
-@value inner: 5px;
+@value inner-position: 5px;
 @value radius: 5px;
 
 .container {
   position: relative;
   display: flex;
   align-items: center;
-  width: max-content;
+  max-width: 700px;
+  width: 100%;
 }
 
 .icon {
   position: absolute;
-  left: inner;
+  left: inner-position;
 }
 
 .input {
   background-color: var(--blue-dark);
-  padding: padding-input;
-  min-width: 500px;
+  padding: 10px 35px;
+  width: 100%;
   border: 1px solid var(--blue);
   border-radius: radius;
   color: var(--white);
@@ -28,9 +27,14 @@
 .button {
   position: absolute;
   background-color: var(--blue);
+  cursor: pointer;
   color: var(--white);
-  padding: padding-button;
+  padding: 7px 15px;
   border: none;
   border-radius: radius;
-  right: inner;
+  right: inner-position;
+}
+
+.button:hover {
+  opacity: 0.7;
 }

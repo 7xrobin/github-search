@@ -1,27 +1,28 @@
-import axios from "axios";
 import { useState } from "react";
 import { useQuery } from "react-query";
-import styles from "./App.module.css";
+import { getUser } from "./requests/user";
+import Results from "./components/results/results";
 import Search from "./components/search/search";
-import User from "./components/user/user";
-import { UserInterface } from "./interfaces/user";
 import "./styles/colors.css";
-
-const getUser = async (username: string): Promise<UserInterface> => {
-  return axios
-    .get(`https://api.github.com/users/${username}`)
-    .then((response) => response.data);
-};
+import styles from "./App.module.css";
 
 function App() {
   const [username, setUserName] = useState<string>("Octocat");
+  const [enableSearch, setEnableSearch] = useState(true);
 
-  const { data, isLoading, refetch } = useQuery(["getUser", username], () => {
-    return getUser(username);
-  });
+  const { data, isLoading, isError } = useQuery(
+    ["getUser", username],
+    () => getUser(username),
+    { enabled: enableSearch }
+  );
+
+  const handleInputChange = (name: string) => {
+    setEnableSearch(false);
+    setUserName(name);
+  };
 
   const handleSearch = () => {
-    refetch();
+    setEnableSearch(true);
   };
 
   return (
@@ -29,10 +30,10 @@ function App() {
       <header>
         <h2>GitHub User Search</h2>
       </header>
-      <Search onInputChange={setUserName} onSearch={handleSearch} />
-      <div className={styles.results}>
-        {isLoading ? <p>Loading...</p> : data && <User user={data} />}
-      </div>
+      <main className={styles.main}>
+        <Search onInputChange={handleInputChange} onSearch={handleSearch} />
+        <Results isLoading={isLoading} isError={isError} data={data} />
+      </main>
     </div>
   );
 }
