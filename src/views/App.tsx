@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Results from "./components/results/results";
-import Search from "./components/search/search";
-import "./styles/colors.css";
+import Results from "../components/results/results";
+import Search from "../components/search/search";
+import { useFetchUser } from "../queries/useFetchUser";
+import "../styles/colors.css";
 import styles from "./App.module.css";
-import { useFetchUser } from "./queries/useFetchUser";
 
 function App() {
   const [username, setUserName] = useState<string>("Octocat");

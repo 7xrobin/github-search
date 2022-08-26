@@ -1,30 +1,34 @@
-# Getting Started with Create React App
+# Github User Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application has a simple search of GitHub users using the public Github API.
+when the app is loaded it gets first the Octocat user information.
+Is possible to search for the username in the search bar input and get its information by clicking on the Search button.
 
-## Available Scripts
+## Running the App
 
-In the project directory, you can run:
+To run the app in the development mode use yarn to install and start the application:
 
-### `yarn start`
+```
+yarn
+yarn start
+```
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Testing
 
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## Tech stach and Libs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Besides this, the APP is build using:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Typescript;
+- [React Query](https://react-query-v3.tanstack.com/);
+- [CSS-Modules](https://github.com/css-modules/css-modules);
+- [React-testing-library](https://testing-library.com/)

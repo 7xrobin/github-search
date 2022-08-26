@@ -1,11 +1,11 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { QueryClient, QueryClientProvider } from "react-query";
-import * as queries from "./queries/useFetchUser";
-import { mockedUser } from "./mocks/user";
+import * as queries from "../queries/useFetchUser";
+import { mockedUser } from "../mocks/user";
 import App from "./App";
 
 beforeEach(() => {
-  jest.mock("./queries/useFetchUser", () => ({
+  jest.mock("../queries/useFetchUser", () => ({
     useFetchUser: () => ({
       data: { ...mockedUser },
       isLoading: false,

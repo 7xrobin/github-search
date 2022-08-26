@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import App from "./App";
 import { QueryClient, QueryClientProvider } from "react-query";
+import App from "./views/App";
 import "./index.css";
 
 const queryClient = new QueryClient();
