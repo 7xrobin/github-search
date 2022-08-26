@@ -1,23 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { UserInterface } from "../../interfaces/user";
+import { mockedUser } from "../../mocks/user";
 import User from "./user";
 
 describe("User Card", () => {
   it("Should display user data fields", () => {
-    const mockedUser: UserInterface = {
-      login: "octocat",
-      avatar_url: "img.url",
-      html_url: "link.url",
-      name: "octocat",
-      company: "github",
-      blog: "link.url",
-      location: "location",
-      email: "email",
-      bio: "bio",
-      twitter_username: "twitter",
-      public_repos: 10,
-      followers: 1,
-    };
     render(<User user={mockedUser} />);
 
     const name = screen.getByText(mockedUser.name as string);
